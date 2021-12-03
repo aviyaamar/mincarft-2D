@@ -1,0 +1,160 @@
+@font-face{
+    /* src: url('../css/fonts/Minecrafter.Reg.ttf'); */
+    src: url('../fonts/MinecraftTen-VGORe.ttf');
+    font-family: minecraft;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gameBorad{
+    display: grid;
+    background-color: white;
+    width: 100vmin;
+    height: 100vmin;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);  
+}
+.gameBorad > div{
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+.gameBorad > div:hover{
+    border: 1px solid white;
+}
+.side-bar-flexColumn{
+    background-color: black;
+    width: 35vmin;
+    height: 100vmin;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    padding-left: 30px;
+    justify-content: space-between;
+}
+
+.tool{
+    margin-left: 45px;
+    padding: 0 10px;
+    margin-top:25px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white; 
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    cursor: pointer;
+ }
+ .tool img{
+    height: 80px;
+    width: 80px;    
+}
+.matirel{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.5rem;
+    
+}
+
+.matirel > div{
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    border: 1px solid white;
+}
+
+.matirel div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background-color:#333
+    
+} 
+
+.btn{
+  background-color:lightcoral; /* Green */
+  border: none;
+  color: white;
+  margin: 15px 20px;
+  padding: 15px 0;
+  width: 140px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 20px;
+  font-family: "minecraft";
+  cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #77CEF6;
+}
+
+  
+/* .MatirelActive{
+    border: 2px solid violet;
+} */
+.active{
+    background-color: rgb(106, 112, 148);
+}
+ 
+
+.sky{
+    background-color: rgb(119, 206, 246);
+}
+
+.ground{
+    background-image: url('/images/soil.jpg');
+    cursor: pointer;
+ }
+ 
+ .cloud{
+     background-image: url('/images/cloud.png');
+     cursor: pointer;
+ }
+ 
+ .grass{
+     background-image: url('/images/grass.png');
+     cursor: pointer;
+ }
+ 
+ .stone{
+     background-image: url('/images/rock.png');
+     cursor: pointer;
+ }
+ 
+ .wood{
+     background-image: url('/images/wood.png');
+     cursor: pointer;
+ }
+ 
+ .tree{
+     background-image: url('/images/tree.png');
+     cursor: pointer;
+ }
+ 
+ .leaf{
+     background-image: url('/images/leaf.png');
+     cursor: pointer;
+ }
+
+
+
