@@ -61,12 +61,7 @@ for (let row=0; row< matrix.length; row++){
         }
     }
 }
-  function createElement(type){
-    let skyDiv=document.createElement('div');
-    skyDiv.classList.add(type);
-    skyDiv.addEventListener('click',tileClick);
-    game.appendChild(skyDiv);  
-}  
+ 
 
 Matirels.forEach((matter) => {
   matter.addEventListener("click", () => {
@@ -74,7 +69,7 @@ Matirels.forEach((matter) => {
     // console.log(tool)
     AddBlock = true;
     removeActive()
-    // matter.classList.add('MatirelActive')
+    matter.classList.add('MatirelActive')
   });
 });
 for (let i = 0; i < tools.length; i++) {
@@ -87,7 +82,14 @@ for (let i = 0; i < tools.length; i++) {
 }
 
 }
-// take a tile from the board and add it to an object of matriels types
+function createElement(type){
+  let skyDiv=document.createElement('div');
+  skyDiv.classList.add(type);
+  skyDiv.addEventListener('click',tileClick);
+  game.appendChild(skyDiv);  
+}  
+
+
 const tileClick = (e) => {
   if (!AddBlock) {
     if (e.target.classList.value === tool ||(tool === "ground" && e.target.classList.value === "grass") ||
@@ -111,7 +113,7 @@ const tileClick = (e) => {
 function UpdateMatriel(e) {  
     Matirels.forEach((matter) => {
         let SP = matter.classList.value.split(' ')
-        // console.log(SP[0])
+        console.log(SP[0])
        if (e === SP[0]) {
       matter.innerHTML = Matriel[e];
     }
@@ -121,7 +123,7 @@ function UpdateMatriel(e) {
 function removeActive(){
     tools.forEach(metter=>metter.classList.remove('active'));
     ToolsIcons.forEach(metter =>metter.classList.remove('active'));
-    // Matirels.forEach(p =>{ p.classList.remove('MatirelActive')})
+     Matirels.forEach(p =>{ p.classList.remove('MatirelActive')})
 }
 
 

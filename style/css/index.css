@@ -50,33 +50,3 @@ img{
 }
 
 
-/* @media(max-width:700px){
-   
-
-    #container{
-        justify-content:initial;
-        align-items: initial;
-    }
-
-    #container div{
-        width: 100vw;
-        height:17vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        z-index: 1;
-    }
-
-    
-#container div img{
-    height: 50%;
-}
-
-.btn{
-    padding: 20px;
-}
-
-
-
-} */
